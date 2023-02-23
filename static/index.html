@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Rust + Webpack project!</title>
+</head>
+
+<body>
+
+  <div class="input">
+    <p>This is an experiment where a Rust WebAssembly module communicates and manipulates data. The web serves more like
+      a rendering layer.</p>
+    <p>There are <code>unsafe</code> Rust code blocks in here but I don't think it's a big deal.</p>
+    <p>Duplicates are not rendered. They are still created in memory though</p>
+    <input type="text" name="" id="name" placeholder="name">
+    <input type="text" name="" id="color" placeholder="color (HEX, RGB)">
+    <button id="addTrigger">Add Object</button>
+  </div>
+  <div id="cont">
+
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    #cont {
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1em;
+    }
+
+    .input {
+      position: fixed;
+    }
+
+    div:not(.input) {
+      color: white;
+      font-weight: bolder;
+      font-size: 1.4em;
+      width: 300px;
+      height: 300px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    code {
+      font-family: monospace;
+      font-size: 1.4em;
+    }
+  </style>
+  <script src="index.js"></script>
+</body>
+
+</html>
